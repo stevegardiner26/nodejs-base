@@ -1,0 +1,23 @@
+{
+  "name": "u-internet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevegardiner26/u-internet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevegardiner26/u-internet/issues"
+  },
+  "homepage": "https://github.com/stevegardiner26/u-internet#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
