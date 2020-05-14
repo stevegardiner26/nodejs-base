@@ -1,0 +1,18 @@
+{
+  "dev": {
+    "driver": "mysql",
+    "host": "localhost",
+    "database": "u_net",
+    "user": "dev",
+    "password": "dev",
+    "multipleStatements": true
+  },
+  "production": {
+    "driver": "mysql",
+    "host": "",
+    "database": "unet_db",
+    "user": {"ENV": "DB_USER"},
+    "password": {"ENV": "DB_PASSWORD"},
+    "multipleStatements": true
+  }
+}

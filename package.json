@@ -1,11 +1,17 @@
 {
   "name": "u-internet",
   "version": "1.0.0",
-  "description": "",
+  "description": "Making a meta level internet",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "migrate": "node node_modules/db-migrate/bin/db-migrate",
+    "migrate_create": "node node_modules/db-migrate/bin/db-migrate --config config/db.json create",
+    "migrate_up_dev": "node node_modules/db-migrate/bin/db-migrate up --config config/db.json -e dev",
+    "migrate_down_dev": "node node_modules/db-migrate/bin/db-migrate down --config config/db.json -e dev",
+    "migrate_rebuild_dev": "npm run migrate_down_dev && npm run migrate_up_dev",
+    "migrate_up_prod": "node node_modules/db-migrate/bin/db-migrate up --config config/db.json -e production"
   },
   "repository": {
     "type": "git",
@@ -18,6 +24,8 @@
   },
   "homepage": "https://github.com/stevegardiner26/u-internet#readme",
   "dependencies": {
+    "db-migrate": "^0.11.11",
+    "db-migrate-mysql": "^2.1.1",
     "express": "^4.17.1"
   }
 }
